@@ -121,7 +121,7 @@ Through The Internet</h1>
         <h1 className='text-5xl font-bold opacity-10'>HOW IT WORKS?</h1>
 
       </div>
-      <div><p className='text-center w-[700px] mt-[30px]'>SurveyPaid offers a tremendous set of free tools for designing your survey, sharing your survey online, and reviewing your survey results. We've got a fantastic user experience and tons of great features.</p></div>
+      <div><p className='text-center w-[700px] mt-[30px]'>SurveyPaid offers a tremendous set of free tools for designing your survey, sharing your survey online, and reviewing your survey results. We ve got a fantastic user experience and tons of great features.</p></div>
       <div className='bg-white h-[900px] w-[700px] rounded-2xl mt-[30px] relative'>
         <div className='absolute -top-[100px] -right-[60px]'>
         <Image src="/Group 656.png" width={200} height={300} alt="logo"/>
