@@ -4,16 +4,16 @@ import Image from "next/image"
 function HeaderForm() {
   return (
     <>
-    <div className='FormContainer bg-white h-[350px] rounded-2xl w-[300px] shadow-2xl p-4' style={{zIndex:10}}>
+    <div className='FormContainer bg-white h-[380px] rounded-2xl md:w-[300px] shadow-[40px] p-4 ' style={{zIndex:99999}}>
         <h1 className='font-extrabold text-[#65AEFF] mt-[20px]'>Get Started Now</h1>
 <p className='text-sm'>Well deposit your earnings into your PayPal account. Our platform is free. Well never charge you for anything without your consent.</p>
    <div className='form mt-[10px]'>
     <div >
-        <input type="email" placeholder="Enter email" className='shadow-2xl'/>
+        <input type="email" placeholder="Enter email" className='shadow w-[250px] h-[40px] placeholder:text-sm p-2'/>
     </div>
 <br/>
     <div className='shadow-2xl bg-white ' >
-        <input type="email" placeholder="Enter password" className='shadow-2xl w-[200px] p-2 '/>
+        <input type="email" placeholder="Enter password" className=' shadow w-[250px] h-[40px] placeholder:text-sm p-2 '/>
     </div>
 
     <div>
@@ -21,7 +21,7 @@ function HeaderForm() {
         
     </div>
 
-    <p className='text-sm'>By Signing up I agree to the Terms of Service and Privacy Policy.</p>
+    <p className='text-sm mt-[10px]'>By Signing up I agree to the Terms of Service and Privacy Policy.</p>
 
    </div>
    

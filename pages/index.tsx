@@ -10,7 +10,14 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
-  const blogs= [
+  type Blog = {
+    img:string,
+    title:string,
+    author:string,
+    authorimg:string
+  }
+
+  const blogs:Blog[]= [
     {
     img:"/img1.png",
     title:"How to Interpret the Results of a Satisfaction Survey Scale?",
@@ -43,7 +50,7 @@ export default function Home() {
       </Head>
    
 
-   <div className='bg-[#D7F1FF] h-[500px] relative'>
+   <div className='bg-[#D7F1FF] md:h-[600px] relative h-[1000px]'>
 
     <div className='absolute top-0 bottom-0 right-[30%] left-[30%]' style={{zIndex:1}}>
 <Image src="/Group 547.png" width={700} height={300} alt="c" style={{zIndex:1}}/>
@@ -51,7 +58,7 @@ export default function Home() {
     
     <Navbar/>
 
-    <div className="Header flex items-center justify-center gap-[40px]" style={{zIndex:99999}}>
+    <div className="Header flex items-center justify-center gap-[40px] flex-col md:flex-row p-3 mt-[30px]" style={{zIndex:99999999}}>
       <div>
         <p className='text-[#3293FF] font-bold text-sm mb-[20px]'>Over 260,262,166 questions answered!</p>
         <div>
@@ -59,11 +66,11 @@ export default function Home() {
 Through The Internet</h1>
 <p className='mt-[30px] mb-[30px] text-sm'>We’ll deposit cash into your account for all the fun things you’re doing online.</p>
         </div>
-        <div className="btn"><button className='border-[1px] border-[#80BFFF] p-2 flex items-center justify-center gap-[10px] w-[150px] text-[#62ADFF] text-sm font-bold'> Learn More</button>
+        <div className="btn"><button className='border-[1px] border-[#80BFFF] p-2 flex items-center justify-center gap-[10px] w-[150px] text-[#62ADFF] text-sm font-bold'>Sign Up</button>
         </div>
       </div>
 
-      <div><HeaderForm/></div>
+      <div style={{zIndex:500}}><HeaderForm/></div>
     </div>
 
     
@@ -71,20 +78,20 @@ Through The Internet</h1>
    
    </div>
 
-   <div className='flex items-center justify-center'>
+   <div className='flex items-center justify-center flex-col-reverse md:flex-row p-3'>
     <div>
 <Image src="/Group 664.png" width={500} height={300} alt="video"/>
     </div>
     <div>
       <p className='text-[#3293FF] font-bold text-sm mb-[10px]'>Millions of survey</p>
-      <h2 className='text-3xl text-[#1C2B38] leading-[50px]'>Create Survey For Anything</h2>
-      <p className='w-[500px]'>Use our easy and customizable survey platform for hundreds of applications. Here are a just a few</p>
+      <h2 className='md:text-3xl text-[#1C2B38] leading-[50px] font-bold text-2xl'>Create Survey For Anything</h2>
+      <p className='md:w-[500px]'>Use our easy and customizable survey platform for hundreds of applications. Here are a just a few</p>
     </div>
    </div>
 
-   <div className='bg-[#2876CC] h-[50px] flex items-center justify-center' style={{borderTopLeftRadius:'40px',borderTopRightRadius:'40px'}}>
+   <div className='bg-[#2876CC] md:h-[50px] flex items-center justify-center flex-col md:flex-row' style={{borderTopLeftRadius:'40px',borderTopRightRadius:'40px'}}>
 
-    <div className='flex items-center justify-center gap-[20px]'>
+    <div className='grid grid-cols-2 md:grid-cols-5 items-center justify-center gap-[20px] p-3'>
       <div><Image src="/Asana-团队协作应用.png" width={100} height={300} alt="video"/></div>
       <div><Image src="/Etrade 亿创理财.png" width={100} height={300} alt="video"/></div>
       <div><Image src="/Walmart.png" width={100} height={300} alt="video"/></div>
@@ -116,13 +123,44 @@ Through The Internet</h1>
 
       <div className='worksHeading flex items-center gap-[20px] mt-[30px]'>
 
-        <h1 className='text-5xl font-bold opacity-10'>HOW IT WORKS?</h1>
-        <h1 className='text-5xl font-bold'>HOW IT WORKS?</h1>
-        <h1 className='text-5xl font-bold opacity-10'>HOW IT WORKS?</h1>
+        <h1 className='text-5xl font-bold opacity-10 hidden md:block'>HOW IT WORKS?</h1>
+        <h1 className='md:text-5xl font-bold'>HOW IT WORKS?</h1>
+        <h1 className='text-5xl font-bold opacity-10 hidden md:block'>HOW IT WORKS?</h1>
 
       </div>
-      <div><p className='text-center w-[700px] mt-[30px]'>SurveyPaid offers a tremendous set of free tools for designing your survey, sharing your survey online, and reviewing your survey results. We ve got a fantastic user experience and tons of great features.</p></div>
+      <div><p className='text-center md:w-[700px] mt-[30px] text-sm'>SurveyPaid offers a tremendous set of free tools for designing your survey, sharing your survey online, and reviewing your survey results. We ve got a fantastic user experience and tons of great features.</p></div>
       <div className='bg-white h-[900px] w-[700px] rounded-2xl mt-[30px] relative'>
+        <div className='flex flex-col items-center justify-center'>
+
+          <div className='flex flex-col items-center justify-center'>
+            <Image src="/Group 618.png" width={200} height={200} alt="icon"/>
+            <div className='-mt-[30px]'>
+              <h2 className='text-[15px] font-bold text-black text-center'>Find And Complete Your Mission</h2>
+              <p className='text-black text-center md:w-[450px] text-sm w-[340px]'>From answering surveys to watching videos, there are always great, easy tasks for you to choose from. Complete as many as youd like - there is gno limit!
+
+              </p>
+            </div>
+          </div>
+          <div className='flex flex-col items-center justify-center'>
+          <Image src="/Group 617.png" width={200} height={200} alt="icon"/>
+            <div className='-mt-[10px]'>
+              <h2 className='text-[15px] font-bold text-black text-center'>Watch The Earnings Grow In Your Account</h2>
+              <p className='text-black text-center md:w-[450px] text-sm w-[340px]'>Your insights help companies grow, so they are happy to pay you for your time and effort. Just sit back and watch the money pile up as you complete your missions.
+
+              </p>
+            </div>
+          </div>
+          <div className='flex flex-col items-center justify-center'>
+          <Image src="/Group 616.png" width={200} height={200} alt="icon"/>
+            <div className='-mt-[10px]'>
+              <h2 className='text-[15px] font-bold text-black text-center'>Watch The Earnings Grow In Your Account</h2>
+              <p className='text-black text-center md:w-[450px] text-sm w-[340px]'>Your insights help companies grow, so they are happy to pay you for your time and effort. Just sit back and watch the money pile up as you complete your missions.
+
+              </p>
+            </div>
+          </div>
+
+        </div>
         <div className='absolute -top-[100px] -right-[60px]'>
         <Image src="/Group 656.png" width={200} height={300} alt="logo"/>
         </div>
@@ -143,16 +181,16 @@ Through The Internet</h1>
       </div>
 
 
-      <div className='flex gap-[30px] items-center justify-center'>
+      <div className='flex gap-[30px] items-center justify-center flex-col-reverse md:flex-row p-3'>
         <div>
           <Image src="/Group 668.png" width={400} height={300} alt="logo"/>
         </div>
         <div>
           <h2 className='text-3xl font-bold'>Survey Paid Mobile App</h2>
           <p>Available on IOS & Android</p>
-          <p className='w-[500px] mt-[30px]'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+          <p className='md:w-[500px] mt-[30px] w-[350px]'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
 
-          <div className='flex gap-[20px]'>
+          <div className='flex gap-[20px] flex-col md:flex-row'>
             <div className='bg-white w-[200px] rounded-full h-[50px] flex items-center justify-center gap-[10px] text-[#3293FF] font-bold text-sm'>
               <Image src="/Vector (2).png" width={20} height={50} alt="ios"/> Download For IOS
 
@@ -170,24 +208,24 @@ Through The Internet</h1>
 
    </div>
 
-<div className='h-[400px] bg-white flex items-center justify-center'>
+<div className='md:h-[400px] bg-white flex items-center justify-center mb-[50px] mt-[50px]'>
   <div className='flex flex-col items-center justify-center'>
 
     <h1 className='font-bold text-3xl'>From The Blog</h1>
 
-    <p>
+    <p className='md:w-[500px] text-center w-[300px] text-sm mt-[20px]'>
     Need to put some dummy texts, but I’m exhausted and don’t know what to put. Sorry!
     </p>
 
-    <div className='flex gap-[20px] mt-[20px]'>
+    <div className='grid grid-col-1 md:grid-cols-4 gap-[20px] mt-[20px]'>
     {blogs.map((blog,index)=>{
       return(
-        <div key={index}>
-          <Image src={blog.img} width={200} height={200} alt="blogimage"/>
-          <div className='mt-[10px] flex gap-[10px] items-center'>
+        <div key={index} className=" md:w-[250px] ">
+          <Image src={blog.img} width={250} height={200} alt="blogimage"/>
+          <div className='mt-[10px] flex gap-[10px] items-center p-2'>
           <Image src={blog.authorimg} width={20} height={200} alt="blogimage"/><h4>{blog.author}</h4>
         </div>
-        <div><p className='w-[220px] text-sm mt-[10px]'>{blog.title}</p></div>
+        <div className="p-2"><p className='w-[200px] text-sm mt-[10px]'>{blog.title}</p></div>
         </div>
       )
     })}
